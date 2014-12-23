@@ -10,6 +10,7 @@
 <title>{% block page_title %}GUI{% endblock %} - Mein Stamm in der WOSM</title>
 
 <link href="{{ LINK_MAIN }}assets/css/style.min.css" rel="stylesheet">
+<link href="{{ LINK_MAIN }}assets/css/jquery-ui.min.css" rel="stylesheet">
 {% block page_css %}
 {% endblock %}
 
@@ -44,6 +45,9 @@
 		</div>
 	</div>
 </div>
+
+<script src="{{ LINK_MAIN }}assets/js/jquery/jquery.min.js"></script>
+<script src="{{ LINK_MAIN }}assets/js/jquery-ui/jquery-ui.min.js"></script>
 {% block page_js %}
 {% endblock %}
 </body>

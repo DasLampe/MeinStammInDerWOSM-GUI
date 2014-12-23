@@ -36,8 +36,9 @@ class searchScoutGroupModel {
 				continue;
 			}
 			$result[] = array(
-				"global_id" => (int) $group->global_id,
-				"name"		=> $group->name
+				"id"	=> $group->global_id,
+				"label"	=> $group->name." - ".$group->city,
+				"value"	=> $group->name
 			);
 		}
 		return $result;

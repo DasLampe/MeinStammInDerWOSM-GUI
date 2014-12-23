@@ -4,6 +4,10 @@
 Startseite
 {% endblock %}
 
+{% block page_js %}
+<script src="{{ LINK_MAIN }}assets/js/searchScoutGroup.js"></script>
+{% endblock %}
+
 {% block content %}
 <h1>Willkommen bei MeinStammInDerWOSM</h1>
 <p>
@@ -13,4 +17,14 @@ Dieses Projekt ist ein GUI für das von <a href="https://github.com/BitScout">Bi
 <p>
 Hier könnt ihr euch einfach eine SVG Datei für euren Stamm erstellen lassen, welches die Ebenen ab der WOSM abbildet.
 </p>
+
+<form class="form-horizontal" action="{{ LINK_MAIN }}getSVG" method="POST" role="form">
+	<div class="form-group">
+		<input type="text" placeholder="Gib hier deinen Stamm oder eine PLZ ein" name="group" class="form-control input-lg" name="group_name" />
+		<input type="hidden" value="" name="group_id" />
+	</div>
+	<div class="form-group">
+		<input type="submit" value="Los geht's" class="btn-lg form-control btn btn-primary">
+	</div>
+</form>
 {% endblock %}
