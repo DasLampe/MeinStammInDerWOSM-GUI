@@ -1,0 +1,11 @@
+#Composer files
+composer.lock
+composer.phar
+#vendor files, created by composer
+vendor/
+
+#cached files
+cache/*
+
+#real config
+config/config.php
