@@ -22,29 +22,11 @@
 </head>
 
 <body>
-
-<div class="site-wrapper">
-	<div class="site-wrapper-inner">
-		<div class="cover-container">
-			<div class="masthead clearfix">
-				<div class="inner">
-					<h3 class="masthead-brand">MeinStammInDerWOSM-GUI</h3>
-					<nav>
-						<ul class="nav masthead-nav">
-							<li class="active"><a href="#">Home</a></li>
-							<li><a href="#">Features</a></li>
-							<li><a href="#">Contact</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
-
-		<div class="inner cover">
-			{% block content %}{% endblock %}
+	<div class="content">
+		<div class="text-vertical-center">
+				{% block content %}{% endblock %}
 		</div>
 	</div>
-</div>
 
 <script src="{{ LINK_MAIN }}assets/js/jquery/jquery.min.js"></script>
 <script src="{{ LINK_MAIN }}assets/js/jquery-ui/jquery-ui.min.js"></script>

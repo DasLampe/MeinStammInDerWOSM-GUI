@@ -9,7 +9,7 @@ Startseite
 {% endblock %}
 
 {% block content %}
-<h1>Willkommen bei MeinStammInDerWOSM</h1>
+<h1>Mein Stamm in der WOSM</h1>
 <p>
 Dieses Projekt ist ein GUI für das von <a href="https://github.com/BitScout">BitScout</a> geschriebene Skript <a href="https://github.com/BitScout/MeinStammInDerWOSM">MeinStammInDerWOSM</a>.
 </p>
@@ -20,11 +20,11 @@ Hier könnt ihr euch einfach eine SVG Datei für euren Stamm erstellen lassen, w
 
 <form class="form-horizontal" action="{{ LINK_MAIN }}getSVG" method="POST" role="form">
 	<div class="form-group">
-		<input type="text" placeholder="Gib hier deinen Stamm oder eine PLZ ein" name="group" class="form-control input-lg" name="group_name" />
+		<input type="text" placeholder="Gib hier deinen Stamm oder eine PLZ ein" name="group" class="form-control input-lg text-center" name="group_name" />
 		<input type="hidden" value="" name="group_id" />
 	</div>
 	<div class="form-group">
-		<input type="submit" value="Los geht's" class="btn-lg form-control btn btn-primary">
+		<button type="submit" class="btn-lg btn btn-primary">Los geht's</button>
 	</div>
 </form>
 {% endblock %}
