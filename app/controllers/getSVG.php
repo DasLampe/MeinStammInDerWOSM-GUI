@@ -90,11 +90,11 @@ class getSVGController extends AbstractController {
 		//Set style info
 		$layer_style = array(5,5,-3,30,30);
 
-		echo "stufen=".urlencode(serialize($troops)).
+		header("Location: ".LINK_MAIN."lib/MeinStammInDerWOSM/wosm.php?stufen=".urlencode(serialize($troops)).
 			"&ebenenRest=".urlencode(serialize($layer_text)).
 			"&ebenen=".urlencode(serialize($layer_info)).
 			"&ebenenInfo=".urlencode(serialize($layer_info_text)).
-			"&ebenenEinzug=".urlencode(serialize($layer_style));
+			"&ebenenEinzug=".urlencode(serialize($layer_style)));
 	}
 
 
