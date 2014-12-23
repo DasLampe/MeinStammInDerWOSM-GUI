@@ -10,6 +10,8 @@
 <title>{% block page_title %}GUI{% endblock %} - Mein Stamm in der WOSM</title>
 
 <link href="{{ LINK_MAIN }}assets/css/style.min.css" rel="stylesheet">
+{% block page_css %}
+{% endblock %}
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -42,6 +44,8 @@
 		</div>
 	</div>
 </div>
+{% block page_js %}
+{% endblock %}
 </body>
 </html>
 
