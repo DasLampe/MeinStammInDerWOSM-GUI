@@ -50,7 +50,11 @@ class getSVGController extends AbstractController {
 		$troops = $this->model->getTroops($id);
 
 		//get amount of other groups in region
-		$groups_region = count($this->model->getChildren($region))-1;
+		if(!is_null($region)) { //no region is possible
+			$groups_region = count($this->model->getChildren($region))-1;
+		} else {
+			$groups_region = 0;
+		}
 		//get amount of other regions in state
 		$regions_state = count($this->model->getChildren($state))-1;
 		//get amount of other states in national association
