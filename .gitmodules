@@ -1,0 +1,3 @@
+[submodule "lib/MeinStammInDerWOSM"]
+	path = lib/MeinStammInDerWOSM
+	url = git@github.com:DasLampe/MeinStammInDerWOSM.git
