@@ -42,7 +42,7 @@ class getSVGController extends AbstractController {
 		$state						= $this->model->getState($id);
 		//$area		= $this->model->getArea($id); //Can't display in svg yet
 		$national_association		= $this->model->getNationalAssociation($id);
-		$wosm_national_federation	= $this->model->getWosmNationalFederation($id);
+		$national_federation		= $this->model->getNationalFederation($id);
 		//Not implemented in ScoutNet-API, but static
 		$international_assoicaion	= array("name" => "World Organisation of Scout Movment (WOSM)");
 
@@ -73,7 +73,7 @@ class getSVGController extends AbstractController {
 			$region->name,
 			$state->name,
 			$this->model->getShortName($national_association->name),
-			$this->model->getShortName($wosm_national_federation->name),
+			$this->model->getShortName($national_federation->name),
 			$this->model->getShortName($international_assoicaion['name']),
 		);
 
@@ -83,7 +83,7 @@ class getSVGController extends AbstractController {
 			'',
 			'',
 			$this->model->getLongName($national_association->name),
-			$this->model->getLongName($wosm_national_federation->name),
+			$this->model->getLongName($national_federation->name),
 			$this->model->getLongName($international_assoicaion['name']),
 		);
 

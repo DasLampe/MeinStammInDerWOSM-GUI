@@ -71,12 +71,16 @@ class getSVGModel {
 	}
 
 	/**
-	* Get WOSM national federation info
+	* Get national federation info
 	* @param integer $group_id
 	* @return array
 	 */
-	public function getWosmNationalFederation($group_id) {
-		return $this->getInfo($group_id, "wosm_national_federation");
+	public function getNationalFederation($group_id) {
+		$result = $this->getInfo($group_id, "wosm_national_federation");
+		if(empty($wosm)) {
+			$result = $this->getInfo($group_id, "wagggs_national_federation");
+		}
+		return $result;
 	}
 
 	/**
@@ -107,8 +111,11 @@ class getSVGModel {
 
 	private function getTroopNames($national_association) {
 		switch($national_association) {
-			case 3:
+			case 3: //DPSG
 				return array("Wölflinge", "Jungpfadfinder", "Pfadfinder", "Rover", "Leiterrunde");
+				break;
+			case 1273: //VCP
+				return array("Kinderstufe", "Jungpfadfinder", "Pfadfinder", "Ranger/Rover", "Erwachsene");
 				break;
 			default:
 				return array("Please", "fill", "out", "for", "other!");
